@@ -7,7 +7,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
-from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain.chains import RetrievalQA
 import streamlit as st
 import tempfile
@@ -18,7 +17,7 @@ st.title("ChatPDF")
 st.write("---")
 
 #파일 업로드
-uploaded_file = st.file_uploader("PDF 파일을 올려주세요.", type=['pdf'])
+uploaded_file = st.file_uploader("PDF 파일을 올려주세요!",type=['pdf'])
 st.write("---")
 
 def pdf_to_document(uploaded_file):
